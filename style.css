@@ -1,0 +1,579 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(19, 3, 36);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(128, 16, 110);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(225, 0, 255);
+  }
+
+.intro{
+    position: fixed;
+    background-color: rgb(19, 3, 36);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    align-self: center;
+    justify-content: center;
+}
+.intro.display-none{
+    opacity: 0;
+    z-index: -20;
+    position: fixed;
+    background-color: rgb(19, 3, 36);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    align-self: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.intro img{
+    margin: 75px auto auto auto;
+    display: block;
+    justify-self: center;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 0;
+        animation: fadeIn;
+        transform: rotate(360deg);
+    } 
+}
+
+.fadeIn{
+    opacity: 1;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+
+body{
+    background-color: rgb(19, 3, 36);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 7px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(128, 16, 110);
+    border: 2px solid rgb(225, 0, 255);
+    border-color: rgb(225, 0, 255);
+    border-radius: 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button:hover{
+    
+    filter: drop-shadow(0px 0px 5px rgb(225, 0, 255));
+    transform: scale(1.10);
+    border-radius: 0px;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(225, 0, 255);
+}
+
+h1{
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* HEADER - ESTILO DO CABEÇALHO */
+
+header{
+    padding: 5px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px rgb(225, 0, 255);
+    transform: scale(1.10);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 50px;
+}
+
+.logo{
+    margin-left: 40px;
+    width: 40px;
+}
+
+.logo img{
+    width: 85px;   
+}
+.logo img:hover{
+    width: 85px;
+    filter: drop-shadow(0px 0px 10px rgb(225, 0, 255));    
+}
+
+
+/* ESTILO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 10px 4%;
+    background-image: url(images/sprite.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.topo-do-site .txt-topo-site h1{
+    color: white;
+    font-size: 42px;
+    line-height: 45px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(225, 0, 255);
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    font-size: 21px;
+    line-height: 25px;
+    margin: 30px 0px;
+}
+
+.img-topo-site img{
+    width: 520px;
+    margin: 0px 0px 0px 40px;
+    position: relative;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 40px;
+    }
+}
+
+/* ESTILO ESPECIALIDADES */
+
+section.especialidades{
+    padding: 80px 4%;
+}
+
+section.especialidades .flex{
+    gap: 70px;
+}
+
+.especialidades .especialidades-box{
+    color: white;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 40px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.10);
+    box-shadow: 0 0 25px rgba(255, 192, 203, 0.473);
+}
+
+.especialidades .especialidades-box i{
+    color: pink;
+    font-size: 70px;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28;
+    margin: 20px 0;
+}
+
+/* ESTILO SOBRE */
+
+section.sobre{
+    padding: 50px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: white;
+}
+
+.sobre .txt-sobre h2{
+    color: white;
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: rgb(225, 0, 255);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    color: white;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.img-sobre img{
+    width: 490px;
+    border-radius: 30px;
+}
+
+.btn-social img{
+    width: 25px;
+    filter: invert(100%) sepia(100%) saturate(0%) contrast(102%) hue-rotate(288deg) brightness(102%);
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(128, 16, 110);
+    transition: .2s;
+    margin: 0px 16px 0px 0px;
+    cursor: pointer;
+}
+
+.btn-social button:hover, .btn-cima button:hover{
+    transform: scale(1.10);
+    box-shadow: 0 0 20px rgb(225, 0, 255);
+}
+
+section.portifolio{
+    margin-top: 50px;
+    padding: 30px 4% 65px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 192, 203, 0.308);
+}
+
+section.portifolio .flex{
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: pink;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 50px;
+    position: relative;
+    border: none;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 24px;
+    font-weight: 560;
+    color: white;
+    border: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.overlay:hover{
+    opacity: 100%;
+}
+
+/* ESTILO FORM */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+}
+
+form textarea{
+    resize: none;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: rgba(255, 255, 255, 0.486);
+    font-size: 18px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+    transition: .2s;
+}
+
+form .btn-enviar:hover{
+    box-shadow: 0px 0px 18px rgb(225, 0, 255);;
+    border: none;
+    border-radius: 15px;
+    transform: scale(1.05);
+}
+
+form .btn-enviar input{
+    background-color: rgb(128, 16, 110);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Rodapé */
+
+footer{
+    padding: 20px 4% 0px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 192, 203, 0.308);
+}
+
+.logo-footer img{
+    width: 70px;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid pink;
+}
+
+footer .line-footer p i{
+    color: pink;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: pink;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+/* BTN CIMA */
+
+.btn-cima{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border: none;
+}
+
+.btn-cima{
+    text-decoration: none;
+    border: none;
+}
+
+.btn-cima button{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(128, 16, 110);;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+
+.btn-cima a button i{
+    font-size: 26px;
+    color: white;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media screen and (max-width: 1250px){
+
+    /* Classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* Cabeçalho */
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    .img-topo-site img{
+        width: 460px;
+    }
+    header{
+        padding: 30px 4% 0px 4%;
+    }
+    section.topo-do-site{
+        padding: 0px 8%;
+    }
+    section.topo-do-site .flex{
+        gap: 10px;
+    }
+
+    .topo-do-site .txt-topo-site h1{
+        text-align: center;
+    }
+    
+    .topo-do-site .txt-topo-site p{
+        text-align: justify;
+    }
+    /* SOBRE */
+    .img-sobre img{
+        width: 410px;
+    }
+    section.sobre .flex{
+        gap: 30px;
+    }
+    section.sobre{
+        padding: 60px 8%;
+    }
+    section.portifolio .flex{
+        gap: 60px;
+    }
+    section.formulario{
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        text-align: center;
+    }
+
+    .btn-social button{
+        margin: 16px 16px 0px 0px;
+    }
+    /* ESPECIALIDADE */
+
+    section.especialidades{
+        padding: 40px 10%;
+    }
+    
+    section.especialidades .flex{
+        gap: 20px;
+    }
+    
+    .especialidades .especialidades-box:hover{
+        transform: scale(1.10);
+        box-shadow: 0 0 25px rgba(255, 192, 203, 0.473);
+    }
+    
+    .especialidades .especialidades-box i{
+        color: pink;
+        font-size: 70px;
+    }
+    
+    .especialidades .esp{
+        line-height: 45px;
+    }
+
+    .especialidades .especialidades-box{
+        margin-top: 80px;
+    }
+
+}
